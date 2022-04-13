@@ -2,7 +2,7 @@
 
 Este es el primer script que hago desde 0 y espero les guste !
 
-## Cosas dentro de el scrip
+## Cosas dentro de el script
 - Tienda de cañas
 - Venta de peces frescos
 - Si quieres vender mas de 10 peces es obligatorio hacer una pequeña ruta !
