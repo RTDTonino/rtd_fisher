@@ -90,7 +90,7 @@ AddEventHandler('rtd_pescador:caña', function()
 				x = false
 			end
 		else
-            ESX.ShowNotification("Necesitas estar en frete del agua")
+            ESX.ShowNotification("Necesitas estar en frente del agua")
 		end
 	end
 	
@@ -251,7 +251,7 @@ function CPS()
 				local e =  true
 				local t = true
 				IMP(cantidad, e, t)	
-				ESX.ShowNotification('Valla ! es mucha mercancia tendras que ir tu mismo a entregarla')
+				ESX.ShowNotification('Valla ! y es mucha mercancia tendras que ir tu mismo a entregarla')
 			else
 				ESX.ShowNotification('Primero termina tu primer encargo !')
 			end
@@ -360,7 +360,7 @@ function TC()
 	t(elementos, {label = '🎣 Comparar Caña 200$', value = 'comprar'})
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'abrir_tienda', {
-		title    = "Quieres vender tus pescados ?",
+		title    = "Quieres comprar una caña ?",
         align    = 'right',
         elements = elementos
 	}, function(data, menu)
