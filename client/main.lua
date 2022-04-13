@@ -100,7 +100,7 @@ function atrapame()
 	Citizen.CreateThread(function()
 		z = 6
 		while true do
-			Citizen.Wait(100)
+			Citizen.Wait(5)
 			if v then
 				break
 			end
