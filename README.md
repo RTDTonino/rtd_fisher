@@ -7,6 +7,7 @@ Este es el primer script que hago desde 0 y espero les guste !
 - Venta de peces frescos
 - Si quieres vender mas de 10 peces es obligatorio hacer una pequeña ruta !
 - resmon : 0.00 fuera de uso | 0.02-4 en uso
+- Vista Previa : https://streamable.com/z5zgwk
 
 
 ## Pasos a Seguir
