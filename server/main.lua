@@ -24,7 +24,7 @@ AddEventHandler('rtd_pescador:vendermenos10', function(cantidad)
 		if xPescado.count >= count then
 			xPlayer.removeInventoryItem(item, count)
 		    xPlayer.addAccountMoney('money', price)
-		    xPlayer.showNotification('Has Vendido 10 Peces Frescos!')
+		    xPlayer.showNotification('Has Vendido '..count..' Peces Frescos!')
 		else
 			xPlayer.showNotification('No tienes suficientes pescados')
 		end
