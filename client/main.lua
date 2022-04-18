@@ -348,7 +348,13 @@ function sacar_auto()
 end
 
 function deleteCar(vehicle)
-    Citizen.InvokeNative( 0xEA386986E786A54F, Citizen.PointerValueIntInitialized( vehicle ) )
+	local ped = PlayerPedId()
+
+	TaskLeaveVehicle(ped, vehicle, 0)
+	Citizen.Wait(3000)
+	NetworkFadeOutEntity(vehicle, false, true)
+	Citizen.Wait(1000)
+	DeleteVehicle(vehicle)
 end
 
 -- [[ Tienda de Cañas ]] --
