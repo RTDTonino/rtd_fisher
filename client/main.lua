@@ -184,7 +184,7 @@ Citizen.CreateThread(function()
 		local coords = RTD.coords
 
         if GetDistanceBetweenCoords(coords.x, coords.y, coords.z, GetEntityCoords(Ped, true)) <= 1 then
-            ESX.ShowHelpNotification('Presiona E para hablar con Alex')
+            ESX.ShowHelpNotification('Presiona ~INPUT_PICKUP~ para hablar con Alex')
             if IsControlJustPressed(0, 38) then
                 VP()
             end
@@ -200,7 +200,7 @@ Citizen.CreateThread(function()
 		local tienda = RTD.tienda
 
         if GetDistanceBetweenCoords(tienda.x, tienda.y, tienda.z, GetEntityCoords(Ped, true)) <= 1 then
-            ESX.ShowHelpNotification('Presiona E para hablar con Raul')
+            ESX.ShowHelpNotification('Presiona ~INPUT_PICKUP~ para hablar con Raul')
             if IsControlJustPressed(0, 38) then
 				TC()
             end
@@ -273,7 +273,7 @@ function IMP(cantidad, e, t)
 				if GetDistanceBetweenCoords(d.x,d.y,d.z,GetEntityCoords(PlayerPedId(), true)) < 50 then
 					DrawMarker(20, d.x,d.y,d.z, 0, 0, 0, 0, 0, 0, 1.5001, 1.5001, 0.6001,0,0,0, 200, 0, 0, 0, 0)
 					if GetDistanceBetweenCoords(d.x,d.y,d.z,GetEntityCoords(PlayerPedId(), true)) < 3 then
-                        ESX.ShowHelpNotification('Pulsa E para descargar el paquete')
+                        ESX.ShowHelpNotification('Pulsa ~INPUT_PICKUP~ para descargar el paquete')
 						if IsControlJustPressed(1,38) then
 							if IsVehicleModel(GetVehiclePedIsIn(PlayerPedId(), true), GetHashKey("mule"))  then
 								local vehicle = GetVehiclePedIsIn(PlayerPedId(), true)
@@ -304,7 +304,7 @@ function IMP(cantidad, e, t)
 				if GetDistanceBetweenCoords(f.x,f.y,f.z,GetEntityCoords(PlayerPedId(), true)) < 50 then
 					DrawMarker(20, f.x,f.y,f.z, 0, 0, 0, 0, 0, 0, 1.5001, 1.5001, 0.6001,0,0,0, 200, 0, 0, 0, 0)
 					if GetDistanceBetweenCoords(f.x,f.y,f.z,GetEntityCoords(PlayerPedId(), true)) < 3 then
-                        ESX.ShowHelpNotification('Pulsa E para dejar la furgoneta.')
+                        ESX.ShowHelpNotification('Pulsa ~INPUT_PICKUP~ para dejar la furgoneta.')
 						if IsControlJustPressed(1,38) then
 							if IsVehicleModel(GetVehiclePedIsIn(PlayerPedId(), true), GetHashKey("mule"))  then
 								local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
