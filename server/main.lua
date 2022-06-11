@@ -1,9 +1,9 @@
 ESX.RegisterUsableItem('canap', function(source)
-	TriggerClientEvent('rtd_pescador:caña', source)
+	TriggerClientEvent('rtd_fisher:caña', source)
 end)
 
-RegisterNetEvent('rtd_pescador:daritem')
-AddEventHandler('rtd_pescador:daritem', function(x, y)
+RegisterNetEvent('rtd_fisher:daritem')
+AddEventHandler('rtd_fisher:daritem', function(x, y)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	if xPlayer then
@@ -11,8 +11,8 @@ AddEventHandler('rtd_pescador:daritem', function(x, y)
 	end
 end)
 
-RegisterNetEvent('rtd_pescador:vendermenos10')
-AddEventHandler('rtd_pescador:vendermenos10', function(cantidad)
+RegisterNetEvent('rtd_fisher:vendermenos10')
+AddEventHandler('rtd_fisher:vendermenos10', function(cantidad)
 	local xPlayer = ESX.GetPlayerFromId(source)
     local item = RTD.nombrepez
 	local count = cantidad
@@ -31,8 +31,8 @@ AddEventHandler('rtd_pescador:vendermenos10', function(cantidad)
 	end
 end)
 
-RegisterNetEvent('rtd_pescador:terminarmision')
-AddEventHandler('rtd_pescador:terminarmision', function(cantidad)
+RegisterNetEvent('rtd_fisher:terminarmision')
+AddEventHandler('rtd_fisher:terminarmision', function(cantidad)
 	local xPlayer = ESX.GetPlayerFromId(source)
     local item = RTD.nombrepez
 	local count = cantidad
@@ -52,8 +52,8 @@ AddEventHandler('rtd_pescador:terminarmision', function(cantidad)
 	end
 end)
 
-RegisterNetEvent('rtd_pescador:comprarobjeto')
-AddEventHandler('rtd_pescador:comprarobjeto', function(cantidad)
+RegisterNetEvent('rtd_fisher:comprarobjeto')
+AddEventHandler('rtd_fisher:comprarobjeto', function(cantidad)
 	local xPlayer = ESX.GetPlayerFromId(source)
     local item = RTD.ncanap
 	local count = cantidad
