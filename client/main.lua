@@ -12,8 +12,8 @@ local e = false
 local p = ""
 local k = RTD.pescados
 
-RegisterNetEvent('rtd_pescador:caña')
-AddEventHandler('rtd_pescador:caña', function()
+RegisterNetEvent('rtd_fisher:caña')
+AddEventHandler('rtd_fisher:caña', function()
 	Ped = PlayerPedId()
 	local pos = GetEntityCoords(PlayerPedId())
 	if IsPedInAnyVehicle(Ped) then
@@ -82,7 +82,7 @@ AddEventHandler('rtd_pescador:caña', function()
 
 				ClearPedTasks(PlayerPedId())
 				if z == correct then
-					TriggerServerEvent("rtd_pescador:daritem", u, i)
+					TriggerServerEvent("rtd_fisher:daritem", u, i)
 					ESX.ShowNotification("Recibiste pescado fresco")
 				else
 					ESX.ShowNotification("El pez se escapo")
@@ -244,7 +244,7 @@ function CPS()
         if cantidad == nil then
             ESX.ShowNotification('Cantidad insuficiente')
 		elseif cantidad <= 10 then
-			TriggerServerEvent('rtd_pescador:vendermenos10', cantidad)
+			TriggerServerEvent('rtd_fisher:vendermenos10', cantidad)
             menu.close()
 		elseif cantidad >  10 then
 			if t == false then
@@ -308,7 +308,7 @@ function IMP(cantidad, e, t)
 						if IsControlJustPressed(1,38) then
 							if IsVehicleModel(GetVehiclePedIsIn(PlayerPedId(), true), GetHashKey("mule"))  then
 								local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
-								TriggerServerEvent('rtd_pescador:terminarmision', cantidad)
+								TriggerServerEvent('rtd_fisher:terminarmision', cantidad)
 								RemoveBlip(blip)
 								deleteCar(vehicle)
 								t = false
@@ -391,7 +391,7 @@ function CDC()
         if cantidad == nil then
             ESX.ShowNotification('Cantidad insuficiente')
 		elseif cantidad >= 1 then
-			TriggerServerEvent('rtd_pescador:comprarobjeto', cantidad)
+			TriggerServerEvent('rtd_fisher:comprarobjeto', cantidad)
             menu.close()
         end
     end, function(data, menu)
